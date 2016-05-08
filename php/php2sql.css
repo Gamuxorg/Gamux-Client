@@ -1,0 +1,29 @@
+.am-table>thead>tr>th,
+.am-table>tbody>tr>td {
+	text-align: center;
+	padding: .7rem .2rem .7rem .2rem;
+	vertical-align: middle;	
+}
+#title th {
+	font-size: 2rem;
+}
+#title div {
+	font-weight: 400;
+    font-size: 0.1rem;	
+	margin-bottom: -5px;
+}
+.name_cn input {
+	width: 12rem;
+}
+.steam_id input {
+	width: 6rem;
+}
+.website input {
+	width: 25rem;
+	word-wrap: break-word;
+	margin: 0 auto;
+}
+.namespace input {
+	text-align: center;
+	border: 0;
+}
