@@ -10,7 +10,7 @@ Gamux.org的桌面客户端软件
 ###1、php后端编写
   如何从nginx通过shell获取游戏数据及使用php分析转化为json api已经基本搞清楚，但在sql处理方面依然存在大量bug，比如有时候会插入重复数据，这方面还希望懂php及sql的朋友协助。
 ###2、steam web api
-  对steam web api文档的研究也只是初步接触，steam的api太庞大，且并没有较好的中文用户的介绍，因此比较缓慢。
+  对steam web api文档的研究也只是初步接触，steam的api太庞大，且并没有较好的中文用户的介绍，因此比较缓慢。一定会支持一键购买正版游戏，并希望除了steam，也能支持desura、gog、humble store等网站的游戏购买。并会支持steam账号登陆及查看自己对该游戏的数据分析。
 ###3、与gamux.org交互
   gamux.org采用mediawiki引擎，其游戏词条将被作为客户端游戏介绍内容部分嵌入，但是目前词条较少，不够丰富，还需朋友们协助编写。
 ###4、electron开发
