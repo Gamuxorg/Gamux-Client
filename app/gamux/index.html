@@ -15,6 +15,41 @@
 				<div class="top5">下载</div>
 				<div class="top6"><input>搜索</div>
 			</div>
+
+			<div class="">
+			<a href="#" onclick="test_cmd()">run cmd test</a>
+			</div>
+
+			<script>
+
+	var spawn = require('child_process').spawn;
+
+	function test_cmd()
+	{
+
+ free  = spawn('free', ['-m']);
+
+// 捕获标准输出并将其打印到控制台
+free.stdout.on('data', function (data) {
+    console.log('标准输出：\n' + data);
+});
+
+// 捕获标准错误输出并将其打印到控制台
+free.stderr.on('data', function (data) {
+    console.log('标准错误输出：\n' + data);
+});
+
+// 注册子进程关闭事件
+free.on('exit', function (code, signal) {
+    console.log('子进程已退出，代码：' + code);
+});
+	
+	}
+   
+
+			</script>
+
+			
 			<div class="g-main-bottom">
 			  <iframe src="http://api.gamux.org/template/list.php?archive=all" style="width: 99.5%; height: 543px;"></iframe>
 			</div>
