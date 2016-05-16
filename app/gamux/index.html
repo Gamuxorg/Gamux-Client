@@ -3,12 +3,32 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Gamux</title>
+		<script>
+			window.gequire = require;
+			window.k= require
+			delete window.require;
+			delete window.exports;
+			delete window.module;
+		</script>
+		<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="../js/functions.js"></script>		
+		<script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
 		<link type="text/css" rel="stylesheet" href="../style/index.css">
+		<link type="text/css" rel="stylesheet" href="../style/list.css">
+		<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.6.2/css/amazeui.min.css">
 	</head>
 	<body>
+		<div class="g-menu">
+		<div class="g-menu-title">Gamux Client</div>
+		<div class="g-menu-close">
+			<span class="option">选项</span>
+			<span class="minisize">最小化</span>
+			<span id="close"><a class="close" href="javascript:window.close()">关闭</a></span>
+		</div>	    
+		</div>
 		<div class="g-main">
 			<div class="g-main-top">
-				<div class="top1"><a href="http://api.gamux.org/template/list.php?archive=all">Gamux</a></div>
+				<div class="top1"><a href="./index.html">Gamux</a></div>
 				<div class="top2">游戏</div>
 				<div class="top3">更新</div>
 				<div class="top4">卸载</div>
@@ -22,7 +42,7 @@
 
 			<script>
 
-	var spawn = require('child_process').spawn;
+	var spawn = window.k('child_process').spawn;
 
 	function test_cmd()
 	{
@@ -47,12 +67,48 @@ free.on('exit', function (code, signal) {
 	}
    
 
+   function lanchGame(game)
+   {
+   	console.log(game)
+      test_cmd()
+   }
+
 			</script>
 
 			
-			<div class="g-main-bottom">
-			  <iframe src="http://api.gamux.org/template/list.php?archive=all" style="width: 99.5%; height: 543px;"></iframe>
+			<!--<div class="g-main-bottom">
+			
+			  <iframe  rc="http://api.gamux.org/template/list.php?archive=all" style="width: 99.5%; height: 0px;display:none"></iframe>
+
+
+		</div>
+		 -->
+
+		<div class="g-main-bottom">
+			<div class="top-breadcrumb">
+				<ol class="am-breadcrumb">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="index.html">分类</a></li>
+				</ol>
+			</div>
+			
+			<div class="mid">   		
+				<ul class="am-list game-list"></ul>
+			</div>
+			<div class="pagination">
+				<div class="pagi-fist"><a href="#first" class="pfa">首页</a></div>
+				<div class="pagi-up"><a href="#up" class="pua" style="display:none;">前一页</a></div>
+				<div class="pagi-down"><a href="#down" class="pda">后一页</a></div>
+				<div class="pagi-last"><a href="#last" class="pla">尾页</a></div>
+
+
 			</div>
 		</div>
+		<script>
+			Jsonlen();
+			Gapi(true);
+			Pagination();
+			//getGame();
+		</script>
 	</body>
 </html>

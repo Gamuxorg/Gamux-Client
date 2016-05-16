@@ -1,0 +1,63 @@
+ol,ul {
+	margin: 0!important;
+}
+
+.mid, .mid>ul {
+	height: 481px;
+}
+.mid div {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.top-breadcrumb {
+	width: 100%;
+	height: auto;
+	background-color: #0e90d2;
+}
+.am-breadcrumb {
+	height: 2.5em;
+}
+.am-breadcrumb li a{
+	color: #000;
+}
+.am-breadcrumb>.am-active {
+	color: #fff;
+}
+.game-list {
+	margin-bottom: 0;
+}
+.game-list .list-block {
+	padding: 0.25rem 0;
+}
+.game-list li:nth-child(1) .list-block {
+	margin-top: 2rem;
+}
+.list-block-a-namecn {
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	
+}
+.list-block-a-nameen {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+.list-block-a-size,
+.list-block-a-time {
+	font-size: 2rem;
+	line-height: 2rem;
+}
+.list-block-c button {
+	height: 3.5rem;
+}
+.pagination {
+	margin-top: 1.5rem;
+	display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;	
+}
+.pagination div {
+	width: 50px;
+	margin-right: 1rem;
+}
