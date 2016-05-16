@@ -1,8 +1,0 @@
-{
-  "name" : "Gamux",
-  "version" : "0.1.0",
-  "main" : "main.js",
-  "application" : {
-    "name" : "Gamux"
-  }
-}
