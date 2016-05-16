@@ -48,8 +48,10 @@ function Gapi(ifsync=false) {
 			}
 
 			$('.lanchgame').click(function(){
+				console.log('lanch start')
 				var namespace = $(this).attr('game');
-				lanchGame(namespace);
+				ret=lanchGame(namespace);
+				console.log('lanch end'+ret)
 
 			})
 
