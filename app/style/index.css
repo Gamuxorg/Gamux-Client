@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'siyuan';
-	src: url('./msyh') format('ttf');
+	src: url('SourceHanSans-Regular.ttf');
 }
 * {
 	font-family: 'siyuan';
