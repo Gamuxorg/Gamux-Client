@@ -2,6 +2,7 @@
 var pagifrom = 0;
 var jsonlen = 0;
 var itemonpage = 10;
+//获取数组数量
 function Jsonlen() {
 	$.ajax({
 		type     : "get",
@@ -16,6 +17,7 @@ function Jsonlen() {
 		}
 	});
 }
+//获取游戏列表和游戏页面
 function Gapi(ifsync=false) {
 	$(document).ready( function() {
 	$.ajax({
@@ -29,21 +31,22 @@ function Gapi(ifsync=false) {
 				$('.game-list').append(
 					'<li class="gamelist-'+i+'">' +
 						'<div class="list-block am-g">' +
-							'<div class="list-block-a am-u-md-4">' +
-								'<div class="list-block-a-namecn">'+i+data[i]['name_cn']+'</div>' +
+							'<div class="list-block-a am-u-md-5">' +
+								'<div class="list-block-a-namecn">'+data[i]['name_cn']+'</div>' +
 								'<div class="list-block-a-nameen">'+data[i]['name_en']+'</div>' +
 							'</div>' +
 							'<div class="list-block-b am-u-md-4">' +
 								'<div class="list-block-a-size">'+data[i]['size']+'</div>' +
 								'<div class="list-block-a-time">'+data[i]['modify_time']+'</div>' +
 							'</div>' +
-							'<div class="list-block-c am-u-md-4">' +
-								'<button><a href="#" class="getgame" game="'+data[i]['namespace']+'">点击进入</a></button>' +
+							'<div class="list-block-c am-u-md-3">' +
+								'<button type="button" class="am-btn am-btn-primary"><a href="#" class="getgame" game="'+data[i]['namespace']+'">点击进入</a></button>' +
 							'</div>' +
 						'</div>' +
 					'</li>'								
 				);
 			}
+			//获取游戏页面
 			$('.getgame').click( function() {
 				var namespace = $(this).attr('game');
 				$.ajax({
@@ -61,7 +64,7 @@ function Gapi(ifsync=false) {
 	});
 	});
 }
-
+//分页
 function Pagination() {
 	$(document).ready(function() {
 		$('.pda').click( function() {
@@ -97,25 +100,4 @@ function Pagination() {
 			$('.pua').css('display', 'block');
 		});		
 	});
-}
-//page.html
-function getGame() {
-		$('.getgame').click( function() {
-		$.ajax({
-			type     : "get",
-			url      : "http://api.gamux.org/template/page.php?namespace="+$(this).attr('game'),
-			dataType : "html",
-			async: false,
-			success  : function(data) {
-				alert($(this).attr('game'));
-			}
-		});
-		});
-}
-function GET(name) {    
-  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");    
-  var r = window.location.search.substr(1).match(reg);    
-  if (r != null) 
-	return unescape(r[2]); 
-	return null;   
 }

@@ -19,10 +19,11 @@
 	<body>
 		<div class="g-menu">
 		<div class="g-menu-title">Gamux Client</div>
+
 		<div class="g-menu-close">
 			<span class="option">选项</span>
-			<span class="minisize">最小化</span>
-			<span id="close"><a class="close" href="javascript:window.close()">关闭</a></span>
+			<span class="minisized"><a class="minisize" href="#">最小化</a></span>
+			<span class="closed"><a class="close" href="#">关闭</a></span>
 		</div>	    
 		</div>
 		<div class="g-main">
@@ -50,7 +51,7 @@
 				<div class="pagi-fist"><a href="#first" class="pfa">首页</a></div>
 				<div class="pagi-up"><a href="#up" class="pua" style="display:none;">前一页</a></div>
 				<div class="pagi-down"><a href="#down" class="pda">后一页</a></div>
-				<div class="pagi-last"><a href="#last" class="pla">尾页</a></div>
+				<div class="pagi-last"><a href="#last" class="pla">尾页</a></div>			
 			</div>
 		</div>
 		<script>
@@ -58,6 +59,15 @@
 			Gapi(true);
 			Pagination();
 			//getGame();
+		</script>
+		<script>
+			const ipcRenderer = gequire('electron').ipcRenderer;
+				document.querySelector('.close').addEventListener('click', function() {
+					ipcRenderer.send('close-main-window');					
+				})
+				document.querySelector('.minisize').addEventListener('click', function() {
+					ipcRenderer.send('mini-main-window');					
+				})				
 		</script>
 	</body>
 </html>

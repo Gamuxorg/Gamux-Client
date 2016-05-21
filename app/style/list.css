@@ -18,8 +18,9 @@ ol,ul {
 .am-breadcrumb {
 	height: 2.5em;
 }
+.am-breadcrumb li,
 .am-breadcrumb li a{
-	color: #000;
+	color: #fff;
 }
 .am-breadcrumb>.am-active {
 	color: #fff;
@@ -47,8 +48,17 @@ ol,ul {
 	font-size: 2rem;
 	line-height: 2rem;
 }
+.list-block-b {
+	padding-left: 5rem;
+}
+.list-block-c {
+	text-align: center;
+}
 .list-block-c button {
 	height: 3.5rem;
+}
+.am-btn a {
+	color: #fff;
 }
 .pagination {
 	margin-top: 1.5rem;

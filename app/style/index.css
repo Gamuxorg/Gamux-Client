@@ -47,7 +47,7 @@ text-decoration:none;
 }
 .option,
 .minisize,
-#close {
+.closed {
 	-webkit-app-region: no-drag;
 	width: auto;	
 }
@@ -68,6 +68,7 @@ text-decoration:none;
 	-webkit-box-pack: center;
 	-webkit-box-align: center;
 	font-weight: 700;
+	color: #fff;
 }
 .top2,.top3,.top4,.top5 {
 	width: 17%;

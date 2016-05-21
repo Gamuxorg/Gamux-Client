@@ -1,9 +1,6 @@
 /*page.php*/
-
-.cnname,
-.enname,
-.gameinfo {
-	margin: 0.5em 0;
+.clean {
+	clear: both;
 }
 .cnname {
 	font-size: 1.5em;
@@ -15,5 +12,25 @@
 .gameinfo span {
 	margin-right: 1em;
 }
-/*list.php*/
+.pagemid {
+	width: 100%;
+	border-bottom: solid 1px #ddd;
+}
+.gamename,
+.gnulogo {
+	float: left;
+	margin: 1rem 0 1rem 1rem;
+}
+.gnulogo {
+	height: 60px;
+	line-height: 60px;
+}
+.gnulogo img {
+	height: 60px;
+}
+.gameimg {
+	float: right;
+    margin: 1rem 2rem 0 1rem;
+}
+
 
