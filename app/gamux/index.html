@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Gamux</title>
 		<script>
 			window.gequire = require;
 			delete window.require;
@@ -21,9 +20,9 @@
 		<div class="g-menu-title">Gamux Client</div>
 
 		<div class="g-menu-close">
-			<span class="option">选项</span>
-			<span class="minisized"><a class="minisize" href="#">最小化</a></span>
-			<span class="closed"><a class="close" href="#">关闭</a></span>
+			<span class="optiond"><a class="option am-close">?</a></span>
+			<span class="minisized"><a class="minisize am-close" href="#">&#8211;</a></span>
+			<span class="closed"><a class="close am-close" href="#">&times;</a></span>
 		</div>	    
 		</div>
 		<div class="g-main">
@@ -58,16 +57,7 @@
 			Jsonlen();
 			Gapi(true);
 			Pagination();
-			//getGame();
 		</script>
-		<script>
-			const ipcRenderer = gequire('electron').ipcRenderer;
-				document.querySelector('.close').addEventListener('click', function() {
-					ipcRenderer.send('close-main-window');					
-				})
-				document.querySelector('.minisize').addEventListener('click', function() {
-					ipcRenderer.send('mini-main-window');					
-				})				
-		</script>
+		<script src="../js/node.js"></script>
 	</body>
 </html>

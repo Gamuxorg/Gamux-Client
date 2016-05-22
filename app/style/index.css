@@ -1,9 +1,9 @@
 @font-face {
-	font-family: 'siyuan';
-	src: url('SourceHanSans-Regular.ttf');
+	font-family: 'wqy-microhei';
+	src: url('wqy-microhei.ttf');
 }
 * {
-	font-family: 'siyuan';
+	font-family: 'wqy-microhei';
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,
 form,fieldset,legend,input,textarea,p,blockquote,th,td,
@@ -50,6 +50,10 @@ text-decoration:none;
 .closed {
 	-webkit-app-region: no-drag;
 	width: auto;	
+}
+a.am-close {
+	color: #fff;
+	opacity: .8;
 }
 .g-main {
 	width: 100%;

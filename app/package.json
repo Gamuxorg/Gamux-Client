@@ -1,8 +1,8 @@
 {
-  "name" : "Gamux",
+  "name" : "Gamux-Client",
   "version" : "0.1.0",
   "main" : "main.js",
   "application" : {
-    "name" : "Gamux"
+    "name" : "Gamux-Client"
   }
 }

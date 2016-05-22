@@ -30,13 +30,14 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
-const ipcMain = require('electron').ipcMain;
-ipcMain.on('mini-main-window', function () {
+  
+  const ipcMain = require('electron').ipcMain;
+  ipcMain.on('mini-main-window', function () {
 	mainWindow.minimize();
-});  
-ipcMain.on('close-main-window', function () {
+  });  
+  ipcMain.on('close-main-window', function () {
 	app.quit();
-});
+  });
 }
 
 // This method will be called when Electron has finished

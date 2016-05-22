@@ -1,7 +1,9 @@
 ol,ul {
 	margin: 0!important;
 }
-
+.clean {
+	clear: both;
+}
 .mid, .mid>ul {
 	height: 481px;
 }
@@ -30,6 +32,7 @@ ol,ul {
 }
 .game-list .list-block {
 	padding: 0.25rem 0;
+	height: 48px;
 }
 .game-list li:nth-child(1) .list-block {
 	margin-top: 2rem;
@@ -53,15 +56,24 @@ ol,ul {
 }
 .list-block-c {
 	text-align: center;
+	padding: 4px 0;
 }
 .list-block-c button {
 	height: 3.5rem;
+}
+.list-block-d img {
+	height: 48px;
+}
+.list-block-a,
+.list-block-b,
+.list-block-c,
+.list-block-d {
 }
 .am-btn a {
 	color: #fff;
 }
 .pagination {
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 	display: -webkit-box;
     -webkit-box-orient: horizontal;
     -webkit-box-pack: center;
