@@ -1,5 +1,6 @@
 # Gamux-Client
 Gamux.org的桌面客户端软件
+![image](https://github.com/Gamuxorg/Gamux-Client/blob/master/screentshot.png)
 ##软件架构
 本软件使用GitHub Electron作为客户端基本引擎，页面渲染部分调用php做后端生成的网页，在网页内容中，使用shell和php生成了服务器的部分游戏数据、gamux.org网站资源及Steam api共同作为数据来源。
 ##开发进度
