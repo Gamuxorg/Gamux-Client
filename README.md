@@ -18,6 +18,6 @@ Gamux.org的桌面客户端软件
 ###4、electron开发
   由于没有桌面开发经验，因此头一次写难免恐慌，对如何与系统交互等相关事宜还需多学习，多交流。目前还不支持游戏的下载、安装、更新和卸载等功能，但后续一定会支持。
 ##如何加入开发
-加入开发可搜微信shouhuanxiaoji联系，目前还不太清楚github organization和team的用法，因此暂时只能这样了，懂的朋友教教我。
+请直接加入gamuxorg@googlegroups.com或添加微信shouhuanxiaoji为好友
 ##License
 GPL v3协议，可免费复制源码、分发、修改、和基于代码的重发布，但仍需以等同条款开放代码。
