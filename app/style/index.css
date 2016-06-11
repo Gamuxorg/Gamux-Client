@@ -27,7 +27,7 @@ text-decoration:none;
 	-webkit-app-region: drag;
 	height: 24px;
 	width: 100%;
-	border-bottom: 1px solid #444;
+	/*border-bottom: 1px solid #444;*/
 	background-color: #333;
 }
 .g-menu-title {
