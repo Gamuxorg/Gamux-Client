@@ -1,6 +1,8 @@
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;
+const Menu = electron.Menu;
+const Tray = electron.Tray;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
@@ -45,6 +47,24 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow);
 
+let appIcon = null;
+app.on('ready', () => {
+  appIcon = new Tray(__dirname + '/img/app.png');
+  const contextMenu = Menu.buildFromTemplate([
+   {
+        label: 'Gamux',
+        enabled: false
+    },
+    {
+        label: '退出',
+        click: function () {
+            app.quit();
+        }
+    }
+  ]);
+  appIcon.setToolTip('This is my application.');
+  appIcon.setContextMenu(contextMenu);
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
