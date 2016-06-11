@@ -25,19 +25,4 @@ document.querySelector('.option').addEventListener('click', function() {
 	win.show();
 });
 
-//托盘
-const {app, Menu, Tray} = gequire('electron').remote;
-let appIcon = null;
-app.on('ready', () => {
-  appIcon = new Tray('/path/to/my/icon');
-  const contextMenu = Menu.buildFromTemplate([
-    {label: 'Item1', type: 'radio'},
-    {label: 'Item2', type: 'radio'},
-    {label: 'Item3', type: 'radio', checked: true},
-    {label: 'Item4', type: 'radio'}
-  ]);
-  appIcon.setToolTip('This is my application.');
-  appIcon.setContextMenu(contextMenu);
-});
-
 	
