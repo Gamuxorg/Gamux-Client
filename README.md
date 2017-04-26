@@ -20,4 +20,4 @@ Gamux.org的桌面客户端软件
 ##如何加入开发
 请直接加入gamuxorg@googlegroups.com或添加微信shouhuanxiaoji为好友
 ##License
-GPL v3协议，可免费复制源码、分发、修改、和基于代码的重发布，但仍需以等同条款开放代码。
+GPLv3协议
