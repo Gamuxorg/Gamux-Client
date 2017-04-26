@@ -14,7 +14,7 @@ Gamux.org的桌面客户端软件
   对steam web api文档的研究也只是初步接触，steam的api太庞大，且并没有较好的中文用户的介绍，因此比较缓慢。一定会支持一键购买正版游戏，并希望除了steam，也能支持desura、gog、humble store等网站的游戏购买。并会支持steam账号登陆及查看自己对该游戏的数据分析。
 ### 3、electron开发
   由于没有桌面开发经验，因此头一次写难免恐慌，对如何与系统交互等相关事宜还需多学习，多交流。目前还不支持游戏的下载、安装、更新和卸载等功能，但后续一定会支持。
-## 如何加入开发
-请直接加入gamuxorg@googlegroups.com或添加微信shouhuanxiaoji为好友
+## 联系作者
+添加微信shouhuanxiaoji为好友
 ## License
 GPLv3协议
