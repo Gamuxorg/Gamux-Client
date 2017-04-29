@@ -8,17 +8,14 @@
 			delete window.exports;
 			delete window.module;
 		</script>
-		<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
-		<script type="text/javascript" src="../js/functions.js"></script>		
+		<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>		
 		<script src="http://cdn.amazeui.org/amazeui/2.6.2/js/amazeui.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="../style/index.css">
-		<link type="text/css" rel="stylesheet" href="../style/list.css">
+		<link type="text/css" rel="stylesheet" href="../style/style.css">
 		<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.6.2/css/amazeui.min.css">
 	</head>
 	<body>
 		<div class="g-menu">
 		<div class="g-menu-title">Gamux Client</div>
-
 		<div class="g-menu-close">
 			<span class="optiond"><a class="option am-close">?</a></span>
 			<span class="minisized"><a class="minisize am-close" href="#">&#8211;</a></span>
@@ -35,29 +32,9 @@
 				<div class="top6"><input>搜索</div>
 			</div>
 		</div>
-		<div class="g-main-bottom">
-			<div class="top-breadcrumb">
-				<ol class="am-breadcrumb">
-					<li><a href="index.html">首页</a></li>
-					<li><a href="index.html">分类</a></li>
-				</ol>
-			</div>
-			
-			<div class="mid">   		
-				<ul class="am-list game-list"></ul>
-			</div>
-			<div class="pagination">
-				<div class="pagi-fist"><a href="#first" class="pfa">首页</a></div>
-				<div class="pagi-up"><a href="#up" class="pua" style="display:none;">前一页</a></div>
-				<div class="pagi-down"><a href="#down" class="pda">后一页</a></div>
-				<div class="pagi-last"><a href="#last" class="pla">尾页</a></div>			
-			</div>
+		<div class="g-main-bottom">			
+
 		</div>
-		<script>
-			Jsonlen();
-			Gapi(true);
-			Pagination();
-		</script>
 		<script src="../js/node.js"></script>
 	</body>
 </html>

@@ -16,7 +16,7 @@ document.querySelector('.minisize').addEventListener('click', function() {
 
 document.querySelector('.option').addEventListener('click', function() {
 	const {BrowserWindow} = gequire('electron').remote;
-	let win = new BrowserWindow({width: 500, height: 260, show: false, frame: false, resizable: false});
+	let win = new BrowserWindow({width: 500, height: 290, show: false, frame: false, resizable: false});
 	win.on('closed', () => {
 		win = null;
 	});
