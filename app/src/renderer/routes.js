@@ -1,8 +1,13 @@
 export default [
   {
     path: '/',
-    name: 'landing-page',
-    component: require('components/LandingPageView')
+    name: 'index',
+    component: require('components/lgame')
+  },
+  {
+    path: '/detail/:id',
+    name: 'detail',
+    component: require('components/detail')
   },
   {
     path: '*',
