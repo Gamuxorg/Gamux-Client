@@ -2,9 +2,9 @@
   <section class="catecory flex">
     <div class="logo">
     </div>
-    <div v-for="c in catecory">
+    <div v-for="c in data">
       <div class="">
-        <a href="#" style="color:#fff" @click.prevent="getCatecory(c.id)">{{c.name}}</a>
+        <a href="#" style="color:#fff" @click.prevent="clickCallBack(c.id)">{{c.name}}</a>
       </div>
     </div>
   </section>
@@ -12,6 +12,19 @@
 
 <script>
 export default {
+  name:'nav-category',
+  props:{
+    clickCallBack:{
+      type: Function,
+      required: true,
+      default: function () {
+      }
+    },
+    data:{
+      type: Array,
+      default: []
+    }
+  }
 }
 </script>
 

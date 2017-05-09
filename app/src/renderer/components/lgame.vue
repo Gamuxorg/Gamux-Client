@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="root">
-    <section class="catecory flex">
+    <!-- <section class="catecory flex">
       <div class="logo">
       </div>
       <div v-for="c in catecory">
@@ -8,10 +8,11 @@
           <a href="#" style="color:#fff" @click.prevent="getCatecory(c.id)">{{c.name}}</a>
         </div>
       </div>
-    </section>
+    </section> -->
+    <nav-category :clickCallBack="getPosts" :data="catecory"></nav-category>
     <section class="post-list container">
       <div v-for="item in posts" class="post-row" @click="goDetail(item.id)">
-        <img src="" alt="">
+        <img :src="getRowThumbSrc(item)" alt="">
         <div>
           <p>{{item.title.rendered}}</p>
         </div>
@@ -24,36 +25,42 @@
 
 <script>
 const request = require('axios')
-import goTop from "./goTop.vue"
+import goTop from './goTop.vue'
+import navCategory from './nav'
 export default {
   components:{
-    goTop
+    goTop,
+    navCategory
   },
   data() {
     return {
       catecory: [],
-      posts: []
+      posts: [],
+      catecoryId: undefined
     }
   },
   async created() {
     try {
-      let {
-        data: catecory
-      } = await this.getCatecory()
-      let {
-        data: posts
-      } = await this.getPosts()
-      this.catecory = catecory
-      this.posts = posts
+      console.log('$route',this.$route);
+      console.log('$router',this.$router);
+      this.catecoryId = this.$route.params.cid
+      this.getCatecory()
+      this.getPosts(this.catecoryId)
     } catch (e) {
-      console.log(e);
-    } finally {
-      console.log(this.catecory, this.posts);
+      console.error(e);
     }
   },
   methods: {
-    async getCatecory(categories) {
-      return request.get(`https://www.linuxgame.cn/wp-json/wp/v2/categories?orderby=count`)
+    async getCatecory() {
+      let params = {
+        orderby: 'count'
+      }
+      return request.get('https://www.linuxgame.cn/wp-json/wp/v2/categories',{
+        params:params
+      }).then((data) => {
+        this.catecory = data.data;
+        Promise.resolve(data)
+      }).catch(Promise.reject)
     },
     async getPosts(categories,pageIndex=0,perpage=10) {
       let params = {
@@ -62,10 +69,16 @@ export default {
       categories? params.categories = categories : null
       return request.get('https://www.linuxgame.cn/wp-json/wp/v2/posts',{
         params:params
-      })
+      }).then((data) => {
+        this.posts = data.data;
+        Promise.resolve(data)
+      }).catch(Promise.reject)
     },
     goDetail(id){
       this.$router.push({ name: 'detail', params: { id: id }})
+    },
+    getRowThumbSrc(row){
+      return row.gmeta[0].match(/src=["'](.*?)["']/)[1].trim()
     }
   }
 }
